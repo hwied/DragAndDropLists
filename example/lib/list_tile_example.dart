@@ -28,19 +28,19 @@ class _ListTileExample extends State<ListTileExample> {
               title: Text(
                 'Header $index',
               ),
-              subtitle: Text('Header $index subtitle'),
+              collapsedFooter: Text('Header $index subtitle'),
             ),
             Divider(),
           ],
         ),
-        footer: Column(
+        collapsedFooter: Column(
           children: <Widget>[
             Divider(),
             ListTile(
               title: Text(
                 'Footer $index',
               ),
-              subtitle: Text('Footer $index subtitle'),
+              collapsedFooter: Text('Footer $index subtitle'),
             ),
           ],
         ),

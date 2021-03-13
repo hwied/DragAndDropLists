@@ -67,7 +67,7 @@ class _ListTileExample extends State<ExpansionTileExample> {
     var innerList = _lists[outerIndex];
     return DragAndDropListExpansion(
       title: Text('List ${innerList.name}'),
-      subtitle: Text('Subtitle ${innerList.name}'),
+      collapsedFooter: Text('Subtitle ${innerList.name}'),
       leading: Icon(Icons.ac_unit),
       children: List.generate(innerList.children.length,
           (index) => _buildItem(innerList.children[index])),

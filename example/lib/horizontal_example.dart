@@ -84,7 +84,7 @@ class _HorizontalExample extends State<HorizontalExample> {
           ),
         ],
       ),
-      footer: Row(
+      collapsedFooter: Row(
         children: <Widget>[
           Expanded(
             child: Container(

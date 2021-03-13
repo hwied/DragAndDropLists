@@ -19,48 +19,48 @@ typedef void OnItemReordered(
 );
 typedef void OnItemDropOnLastTarget(
   DragAndDropItem newOrReorderedItem,
-  DragAndDropListInterface parentList,
+  DragAndDropListInterface? parentList,
   DragAndDropItemTarget receiver,
 );
 typedef void OnListReordered(
   DragAndDropListInterface reorderedList,
-  DragAndDropListInterface receiverList,
+  DragAndDropListInterface? receiverList,
 );
 
 class DragAndDropBuilderParameters {
-  final OnPointerMove onPointerMove;
-  final OnPointerUp onPointerUp;
-  final OnPointerDown onPointerDown;
-  final OnItemReordered onItemReordered;
-  final OnItemDropOnLastTarget onItemDropOnLastTarget;
-  final OnListReordered onListReordered;
-  final ListOnWillAccept listOnWillAccept;
-  final ListTargetOnWillAccept listTargetOnWillAccept;
-  final OnListDraggingChanged onListDraggingChanged;
-  final ItemOnWillAccept itemOnWillAccept;
-  final ItemTargetOnWillAccept itemTargetOnWillAccept;
-  final OnItemDraggingChanged onItemDraggingChanged;
+  final OnPointerMove? onPointerMove;
+  final OnPointerUp? onPointerUp;
+  final OnPointerDown? onPointerDown;
+  final OnItemReordered? onItemReordered;
+  final OnItemDropOnLastTarget? onItemDropOnLastTarget;
+  final OnListReordered? onListReordered;
+  final ListOnWillAccept? listOnWillAccept;
+  final ListTargetOnWillAccept? listTargetOnWillAccept;
+  final OnListDraggingChanged? onListDraggingChanged;
+  final ItemOnWillAccept? itemOnWillAccept;
+  final ItemTargetOnWillAccept? itemTargetOnWillAccept;
+  final OnItemDraggingChanged? onItemDraggingChanged;
   final Axis axis;
   final CrossAxisAlignment verticalAlignment;
-  final double listDraggingWidth;
+  final double? listDraggingWidth;
   final bool dragOnLongPress;
   final int itemSizeAnimationDuration;
-  final Widget itemGhost;
+  final Widget? itemGhost;
   final double itemGhostOpacity;
-  final Widget itemDivider;
-  final double itemDraggingWidth;
-  final Decoration itemDecorationWhileDragging;
+  final Widget? itemDivider;
+  final double? itemDraggingWidth;
+  final Decoration? itemDecorationWhileDragging;
   final int listSizeAnimationDuration;
-  final Widget listGhost;
+  final Widget? listGhost;
   final double listGhostOpacity;
-  final EdgeInsets listPadding;
-  final Decoration listDecoration;
-  final Decoration listDecorationWhileDragging;
-  final Decoration listInnerDecoration;
+  final EdgeInsets? listPadding;
+  final Decoration? listDecoration;
+  final Decoration? listDecorationWhileDragging;
+  final Decoration? listInnerDecoration;
   final double listWidth;
   final double lastItemTargetHeight;
   final bool addLastItemTargetHeightToTop;
-  final Widget dragHandle;
+  final Widget? dragHandle;
   final bool dragHandleOnLeft;
   final DragHandleVerticalAlignment listDragHandleVerticalAlignment;
   final DragHandleVerticalAlignment itemDragHandleVerticalAlignment;
