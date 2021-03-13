@@ -29,6 +29,7 @@ export 'package:drag_and_drop_lists/drag_and_drop_item.dart';
 export 'package:drag_and_drop_lists/drag_and_drop_item_target.dart';
 export 'package:drag_and_drop_lists/drag_and_drop_item_wrapper.dart';
 export 'package:drag_and_drop_lists/drag_and_drop_list.dart';
+export 'package:drag_and_drop_lists/drag_and_drop_list_collapsable.dart';
 export 'package:drag_and_drop_lists/drag_and_drop_list_expansion.dart';
 export 'package:drag_and_drop_lists/drag_and_drop_list_target.dart';
 export 'package:drag_and_drop_lists/drag_and_drop_list_wrapper.dart';
