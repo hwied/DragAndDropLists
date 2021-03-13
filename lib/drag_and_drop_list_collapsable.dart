@@ -15,9 +15,6 @@ class DragAndDropListCollapsable implements DragAndDropListExpansionInterface {
   final List<Widget> header;
   final EdgeInsets? headerPadding;
 
-  /// The widget that is displayed at the top of the list.
-  final Widget? trailing;
-
   /// The widget that is displayed at the bottom of the list.
   final Widget? footer;
 
@@ -64,7 +61,6 @@ class DragAndDropListCollapsable implements DragAndDropListExpansionInterface {
   /// Disable to borders displayed at the top and bottom when expanded
   final bool disableTopAndBottomBorders;
 
-  final Color? backgroundColor;
   final bool initiallyExpanded;
 
   /// Whether or not this item can be dragged.
@@ -84,7 +80,6 @@ class DragAndDropListCollapsable implements DragAndDropListExpansionInterface {
       this.leading,
       this.header=const <Widget>[],
       this.headerPadding,
-      this.trailing,
       this.footer,
       this.collapsedFooter,
       this.leftSide,
@@ -92,7 +87,6 @@ class DragAndDropListCollapsable implements DragAndDropListExpansionInterface {
       this.contentsWhenEmpty,
       this.onExpansionChanged,
       this.initiallyExpanded = false,
-      this.backgroundColor,
       this.lastTarget,
       this.decoration,
       this.horizontalAlignment = MainAxisAlignment.start,
@@ -145,7 +139,6 @@ class DragAndDropListCollapsable implements DragAndDropListExpansionInterface {
       listKey: listKey,
       footer: footer,
       collapsedFooter: collapsedFooter ?? footer,
-      trailing: trailing,
       leading: leading,
       disableTopAndBottomBorders: disableTopAndBottomBorders,
       decoration: decoration ?? params.listDecoration,
@@ -177,7 +170,6 @@ class DragAndDropListCollapsable implements DragAndDropListExpansionInterface {
                     },
                     onWillAccept: (incoming) {
                       _startExpansionTimer();
-                      print("over");
                       return true;
                     },
                     onLeave: (incoming) {
@@ -186,8 +178,6 @@ class DragAndDropListCollapsable implements DragAndDropListExpansionInterface {
                     },
                     onAccept: (incoming) {
                       _stopExpansionTimer();
-                      expand();
-                      print("drop");
                       params.onItemDropOnLastTarget!(incoming, this, lastTargetItem!);
                     },
                   ),

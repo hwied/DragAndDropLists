@@ -8,7 +8,7 @@ import 'package:flutter/widgets.dart';
 
 const Duration _kExpand = Duration(milliseconds: 200);
 
-/// A single-line [ListTile] with a trailing button that expands or collapses
+/// A single-line [Container] with a leading button that expands or collapses
 /// the tile to reveal or hide the [child].
 ///
 /// This widget is typically used with [ListView] to create an
@@ -38,7 +38,6 @@ class ProgrammaticExpansionContainer extends StatefulWidget {
     this.decoration,
     this.onExpansionChanged,
     this.child,
-    this.trailing,
     this.initiallyExpanded = false,
     this.disableTopAndBottomBorders = false,
   })  : assert(initiallyExpanded != null),
@@ -79,9 +78,6 @@ class ProgrammaticExpansionContainer extends StatefulWidget {
 
   /// The decoration to display behind the sublist.
   final Decoration? decoration;
-
-  /// A widget to display after the title
-  final Widget? trailing;
 
   /// Specifies if the list tile is initially expanded (true) or collapsed (false, the default).
   final bool initiallyExpanded;
