@@ -501,7 +501,7 @@ class DragAndDropListsState extends State<DragAndDropLists> {
     );
   }
 
-  List<Widget?> _buildOuterList(DragAndDropListTarget dragAndDropListTarget,
+  List<Widget> _buildOuterList(DragAndDropListTarget dragAndDropListTarget,
       DragAndDropBuilderParameters parameters) {
     bool includeSeparators = widget.listDivider != null;
     int childrenCount = _calculateChildrenCount(includeSeparators);
@@ -521,7 +521,7 @@ class DragAndDropListsState extends State<DragAndDropLists> {
       return (widget.children?.length ?? 0) + 1;
   }
 
-  Widget? _buildInnerList(
+  Widget _buildInnerList(
       int index,
       int childrenCount,
       DragAndDropListTarget dragAndDropListTarget,
@@ -530,7 +530,7 @@ class DragAndDropListsState extends State<DragAndDropLists> {
     if (index == childrenCount - 1) {
       return dragAndDropListTarget;
     } else if (includeSeparators && index.isOdd) {
-      return widget.listDivider;
+      return widget.listDivider!;
     } else {
       return DragAndDropListWrapper(
         dragAndDropList:
