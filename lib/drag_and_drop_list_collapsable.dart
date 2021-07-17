@@ -174,7 +174,6 @@ class DragAndDropListCollapsable implements DragAndDropListExpansionInterface {
                     },
                     onLeave: (incoming) {
                       _stopExpansionTimer();
-
                     },
                     onAccept: (incoming) {
                       _stopExpansionTimer();
@@ -193,11 +192,11 @@ class DragAndDropListCollapsable implements DragAndDropListExpansionInterface {
     return toReturn;
   }
 
-  List<Widget?> _generateDragAndDropListInnerContents(
+  List<Widget> _generateDragAndDropListInnerContents(
       DragAndDropBuilderParameters? params) {
-    var contents = <Widget?>[];
+    List<Widget> contents = <Widget>[];
     if (leftSide != null) {
-      contents.add(leftSide);
+      contents.add(leftSide!);
     }
     if (children != null && children.isNotEmpty) {
       List<Widget?> allChildren = <Widget?>[];
@@ -251,7 +250,7 @@ class DragAndDropListCollapsable implements DragAndDropListExpansionInterface {
       );
     }
     if (rightSide != null) {
-      contents.add(rightSide);
+      contents.add(rightSide!);
     }
     return contents;
   }
